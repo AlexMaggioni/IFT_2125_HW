@@ -9,6 +9,9 @@ PrimeCalculator::PrimeCalculator() {
     // Constructor implementation (if needed)
 }
 
+//Canelle Wagner, 20232321
+//Alex Maggioni, Matricule
+
 int PrimeCalculator::CalculateNthPrime(int N) {
     if (N < 1) return -1;
     if (N == 1) return 2; 

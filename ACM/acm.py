@@ -1,5 +1,5 @@
-#Nom, Matricule
-#Nom, Matricule
+#Canelle Wagner, 20232321
+#Alex Maggioni, Matricule
 
 import math
 import numpy as np

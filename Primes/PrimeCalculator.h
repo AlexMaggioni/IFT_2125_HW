@@ -1,5 +1,5 @@
-//Nom, Matricule
-//Nom, Matricule
+//Canelle Wagner, 20232321
+//Alex Maggioni, Matricule
 
 // ce fichier contient les declarations des methodes de la classe PrimeCalculator
 // peut être modifié si vous voulez ajouter d'autres méthodes à la classe
