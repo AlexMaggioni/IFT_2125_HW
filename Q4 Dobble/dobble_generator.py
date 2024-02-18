@@ -85,8 +85,9 @@ class Generator():
             print(f"{len(self.cards)} cartes générées avec succès et écrites dans {cards_file}")
 
         return self.cards
-
-#generator = Generator(order=3)
+    
+# Test
+#generator = Generator(order=7)
 #cards_3 = generator.generate(verbose=True)
 
 

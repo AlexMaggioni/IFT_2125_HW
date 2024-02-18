@@ -65,7 +65,7 @@ class Verificator():
         # Si tous les tests sont passé, le jeu est valide et optimal
         return 0  
 
-        
+# Test
 #verificator = Verificator()
-#result = verificator.verify(cards_file = "cartes_test3.txt", verbose=True)
+#result = verificator.verify(cards_file = "cartes.txt", verbose=True)
 #print("Résultat de la vérification:", result)

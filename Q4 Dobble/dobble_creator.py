@@ -4,7 +4,6 @@
 # cette classe sert a créer les cartes visuelles du jeu dans le dossier "results"
 # this class is used to create the game visual cards in the "results" folder
 
-#from PIL import Image
 from PIL import Image
 import os
 import math
@@ -17,8 +16,8 @@ class Creator():
     def __init__(self, pic_size=300, border_size=10):
         self.pic_size = pic_size
         self.border_size = border_size
-        self.image_folder = "images"
-        self.result_folder = "results"
+        self.image_folder = "images" # images_pays ou images
+        self.result_folder = "results" # results_pays ou results
 
     def make_cards(self, cards_file = "cartes.txt", verbose = False):
         if verbose :
@@ -43,7 +42,9 @@ class Creator():
         # ajout de la bordure sur les cartes visuelles
         for card_index, symbols in enumerate(cards, 1):
             # Calculate grid dimensions
-            grid_cols = grid_rows = int(math.ceil(math.sqrt(len(symbols))))
+            grid_cols = int(math.ceil(math.sqrt(len(symbols))))
+            # Pour être plus esthétique avec 6 symboles par carte 
+            grid_rows = math.ceil(len(symbols)/grid_cols)
 
             card_image = Image.new('RGB', (grid_cols*self.pic_size + 2* self.border_size , grid_cols*self.pic_size + 2* self.border_size), 'white')
 
@@ -77,7 +78,7 @@ class Creator():
             if verbose:
                 print(f"Card {card_index} saved as {filename}.")
 
-# Example usage
+# Test
 #creator = Creator()
 #creator.make_cards(verbose=True)
 
