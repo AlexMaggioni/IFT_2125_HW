@@ -9,6 +9,7 @@
 
 #import os.path
 import itertools
+from statistics import mode
 
 class Verificator():
     def __init__(self):
@@ -25,7 +26,7 @@ class Verificator():
             cards = [list(map(int, line.strip().split())) for line in f if line.strip()]
 
         # Déterminer n à partir du nombre de symboles par carte
-        n = len(cards[-1]) - 1
+        n = mode(list([len(card) for card in cards])) - 1
         total_symbols = n**2 + n + 1
 
         # test : le nombre de carte devrait être optimal
@@ -36,7 +37,7 @@ class Verificator():
         # test : le nombre de symboles par carte est le même pour chaque carte
         if not all(len(card) == n + 1 for card in cards):
             return 2  
-
+        
         # test : chaque paire de cartes partagent toujours un et un seul symbole en commun
         for card1, card2 in itertools.combinations(cards, 2):
             if len(set(card1).intersection(card2)) != 1:
