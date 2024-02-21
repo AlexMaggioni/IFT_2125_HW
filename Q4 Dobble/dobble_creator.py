@@ -1,5 +1,5 @@
-#Nom, Matricule
-#Nom, Matricule
+#Canelle Wagner, 20232321
+#Alex Maggioni, Matricule
 
 # cette classe sert a créer les cartes visuelles du jeu dans le dossier "results"
 # this class is used to create the game visual cards in the "results" folder
@@ -16,8 +16,8 @@ class Creator():
     def __init__(self, pic_size=300, border_size=10):
         self.pic_size = pic_size
         self.border_size = border_size
-        self.image_folder = "images" # images_pays ou images
-        self.result_folder = "results" # results_pays ou results
+        self.image_folder = "images_pays" # images_pays ou images
+        self.result_folder = "results_pays" # results_pays ou results
 
     def make_cards(self, cards_file = "cartes.txt", verbose = False):
         if verbose :
@@ -42,9 +42,9 @@ class Creator():
         # ajout de la bordure sur les cartes visuelles
         for card_index, symbols in enumerate(cards, 1):
             # Calculate grid dimensions
-            grid_cols = int(math.ceil(math.sqrt(len(symbols))))
-            # Pour être plus esthétique avec 6 symboles par carte 
-            grid_rows = math.ceil(len(symbols)/grid_cols)
+            grid_rows = grid_cols = int(math.ceil(math.sqrt(len(symbols))))
+            # Pour être plus esthétique avec par exemple 6 symboles par carte, veillez décommenter la ligne suivante 
+            #grid_rows = math.ceil(len(symbols)/grid_cols)
 
             card_image = Image.new('RGB', (grid_cols*self.pic_size + 2* self.border_size , grid_cols*self.pic_size + 2* self.border_size), 'white')
 

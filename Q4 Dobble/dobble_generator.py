@@ -87,7 +87,7 @@ class Generator():
         return self.cards
     
 # Test
-#generator = Generator(order=7)
+#generator = Generator(order=5)
 #cards_3 = generator.generate(verbose=True)
 
 
