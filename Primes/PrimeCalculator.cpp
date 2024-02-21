@@ -1,22 +1,18 @@
+//Alex Maggioni, 20266243
+//Canelle Wagner, 20232321
+
 #include "PrimeCalculator.h"
 #include <iostream>
 #include <vector>
-#include <cmath> // Use <cmath> instead of <math.h> for C++
-
-// This file contains the definitions of the methods of the PrimeCalculator class
+#include <cmath>
 
 PrimeCalculator::PrimeCalculator() {
-    // Constructor implementation (if needed)
 }
-
-//Canelle Wagner, 20232321
-//Alex Maggioni, Matricule
 
 int PrimeCalculator::CalculateNthPrime(int N) {
     if (N < 1) return -1;
     if (N == 1) return 2; 
 
-    // For small N, use a predefined limit to ensure accuracy and efficiency.
     int limit;
     if (N < 6) {
         limit = 15;

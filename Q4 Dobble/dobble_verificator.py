@@ -1,5 +1,5 @@
+#Alex Maggioni, 20266243
 #Canelle Wagner, 20232321
-#Alex Maggioni, Matricule
 
 # cette classe sert a verifier la validite de l'ensemble des cartes du jeu dans le fichier cartes.txt
 # this class is used to check the validity  of the game cards set in the cartes.txt file

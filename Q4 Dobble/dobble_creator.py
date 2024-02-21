@@ -1,5 +1,5 @@
-#Nom, Matricule
-#Nom, Matricule
+#Alex Maggioni, 20266243
+#Canelle Wagner, 20232321
 
 # cette classe sert a créer les cartes visuelles du jeu dans le dossier "results"
 # this class is used to create the game visual cards in the "results" folder
@@ -16,8 +16,8 @@ class Creator():
     def __init__(self, pic_size=300, border_size=10):
         self.pic_size = pic_size
         self.border_size = border_size
-        self.image_folder = "images" # images_pays ou images
-        self.result_folder = "results" # results_pays ou results
+        self.image_folder = "images" 
+        self.result_folder = "results"
 
     def make_cards(self, cards_file = "cartes.txt", verbose = False):
         if verbose :

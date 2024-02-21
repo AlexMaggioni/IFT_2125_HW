@@ -1,5 +1,5 @@
+#Alex Maggioni, 20266243
 #Canelle Wagner, 20232321
-#Alex Maggioni, Matricule
 
 # cette classe sert a créer les cartes du jeu dans le fichier cartes.txt
 # this class is used to create the game cards in the cartes.txt file
